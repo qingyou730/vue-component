@@ -1,0 +1,74 @@
+$colors: (
+  primary: #4091ff,
+  success: #67c23a,
+  warning: #e6a23c,
+  danger: #f56c6c,
+  info: #909399,
+);
+
+:root {
+  @each $val, $color in $colors {
+    --dyd-color-#{$val}: #{$color};
+
+    @for $i from 1 through 4 {
+      --dyd-color-#{$val}-light-#{2*$i+1}: #{mix(#fff, $color, ((2* $i + 1) * 10 * 1%))};
+    }
+
+    // 没有规律的单独生成
+    --dyd-color-#{$val}-light-8: #{mix(#fff, $color, 80%)};
+    --dyd-color-#{$val}-dark-8: #{mix(#000, $color, 20%)};
+  }
+  --dyd-color-white: #fff;
+  --dyd-color-black: #000;
+  --dyd-bg-color: #ffffff;
+  --dyd-bg-color-page: #f2f3f5;
+  --dyd-bg-color-overlay: #ffffff;
+  --dyd-text-color-primary: #303133;
+  --dyd-text-color-regular: #606266;
+  --dyd-text-color-secondary: #909399;
+  --dyd-text-color-placeholder: #a8abb2;
+  --dyd-text-color-disabled: #c0c4cc;
+  --dyd-border-color: #dcdfe6;
+  --dyd-border-color-light: #e4e7ed;
+  --dyd-border-color-lighter: #ebeef5;
+  --dyd-border-color-extra-light: #f2f6fc;
+  --dyd-border-color-dark: #d4d7de;
+  --dyd-border-color-darker: #cdd0d6;
+  --dyd-fill-color: #f0f2f5;
+  --dyd-fill-color-light: #f5f7fa;
+  --dyd-fill-color-lighter: #fafafa;
+  --dyd-fill-color-extra-light: #fafcff;
+  --dyd-fill-color-dark: #ebedf0;
+  --dyd-fill-color-darker: #e6e8eb;
+  --dyd-fill-color-blank: #ffffff;
+
+  //border
+  --dyd-border-width: 1px;
+  --dyd-border-style: solid;
+  --dyd-border-color-hover: var(--dyd-text-color-disabled);
+  --dyd-border: var(--dyd-border-width) var(--dyd-border-style) var(--dyd-border-color);
+  --dyd-border-radius-base: 4px;
+  --dyd-border-radius-small: 2px;
+  --dyd-border-radius-round: 20px;
+  --dyd-border-radius-circle: 100%;
+
+  //font
+  --dyd-font-size-extra-large: 20px;
+  --dyd-font-size-large: 18px;
+  --dyd-font-size-medium: 16px;
+  --dyd-font-size-base: 14px;
+  --dyd-font-size-small: 13px;
+  --dyd-font-size-extra-small: 12px;
+  --dyd-font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, sans-serif;
+  --dyd-font-weight-primary: 500;
+
+  //disabled
+  --dyd-disabled-bg-color: var(--dyd-fill-color-light);
+  --dyd-disabled-text-color: var(--dyd-text-color-placeholder);
+  --dyd-disabled-border-color: var(--dyd-border-color-light);
+
+  // transition
+  --dyd-transition-duration: 0.3s;
+  --dyd-transition-duration-fast: 0.2s;
+}
