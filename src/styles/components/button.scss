@@ -1,0 +1,130 @@
+.dyd-button {
+  --dyd-button-font-weight: var(--dyd-font-weight-primary);
+  --dyd-button-border-color: var(--dyd-border-color);
+  --dyd-button-bg-color: var(--dyd-fill-color-blank);
+  --dyd-button-text-color: var(--dyd-text-color-regular);
+  --dyd-button-disabled-text-color: var(--dyd-disabled-text-color);
+  --dyd-button-disabled-bg-color: var(--dyd-fill-color-blank);
+  --dyd-button-disabled-border-color: var(--dyd-border-color-light);
+  --dyd-button-hover-text-color: var(--dyd-color-primary);
+  --dyd-button-hover-bg-color: var(--dyd-color-primary-light-9);
+  --dyd-button-hover-border-color: var(--dyd-color-primary-light-7);
+  --dyd-button-active-text-color: var(--dyd-button-hover-text-color);
+  --dyd-button-active-border-color: var(--dyd-color-primary);
+  --dyd-button-active-bg-color: var(--dyd-button-hover-bg-color);
+  --dyd-button-outline-color: var(--dyd-color-primary-light-5);
+  --dyd-button-active-color: var(--dyd-text-color-primary);
+}
+
+.dyd-button {
+  // 接下来再来书写基本的样式
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  height: 40px;
+  background-color: var(--dyd-button-bg-color);
+  border: var(--dyd-border);
+  border-color: var(--dyd-button-border-color);
+  color: var(--dyd-button-text-color);
+  appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: 0.1s;
+  font-weight: var(--dyd-button-font-weight);
+  user-select: none;
+  vertical-align: middle;
+  padding: 12px 20px;
+  font-size: var(--dyd-font-size-base);
+  border-radius: var(--dyd-border-radius-base);
+  &:hover,
+  &:focus {
+    color: var(--dyd-button-hover-text-color);
+    border-color: var(--dyd-button-hover-border-color);
+    background-color: var(--dyd-button-hover-bg-color);
+    outline: none;
+  }
+  &:active {
+    color: var(--dyd-button-active-text-color);
+    border-color: var(--dyd-button-active-border-color);
+    background-color: var(--dyd-button-active-bg-color);
+    outline: none;
+  }
+  &.is-round {
+    border-radius: var(--dyd-border-radius-round);
+  }
+  &.is-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // 禁用相关的样式
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus,
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:focus {
+    color: var(--dyd-button-disabled-text-color);
+    cursor: not-allowed;
+    background-image: none;
+    background-color: var(--dyd-button-disabled-bg-color);
+    border-color: var(--dyd-button-disabled-border-color);
+  }
+  [class*='dyd-icon'] + span {
+    margin-left: 6px;
+    position: relative;
+    bottom: 2px;
+  }
+}
+
+@each $val in primary, success, warning, info, danger {
+  // 这是一种非常灵活的方式，通过挂上去一些类，改变 CSS 变量所对应的值
+  .dyd-button--#{$val} {
+    --dyd-button-text-color: var(--dyd-color-white);
+    --dyd-button-bg-color: var(--dyd-color-#{$val});
+    --dyd-button-border-color: var(--dyd-color-#{$val});
+    --dyd-button-outline-color: var(--dyd-color-#{$val}-light-5);
+    --dyd-button-active-color: var(--dyd-color-#{$val}-dark-2);
+    --dyd-button-hover-text-color: var(--dyd-color-white);
+    --dyd-button-hover-bg-color: var(--dyd-color-#{$val}-light-3);
+    --dyd-button-hover-border-color: var(--dyd-color-#{$val}-light-3);
+    --dyd-button-active-bg-color: var(--dyd-color-#{$val}-dark-2);
+    --dyd-button-active-border-color: var(--dyd-color-#{$val}-dark-2);
+    --dyd-button-disabled-text-color: var(--dyd-color-white);
+    --dyd-button-disabled-bg-color: var(--dyd-color-#{$val}-light-5);
+    --dyd-button-disabled-border-color: var(--dyd-color-#{$val}-light-5);
+  }
+  // 如果挂了 is-plain 这个，那么同样是改变一些 CSS 变量的值
+  .dyd-button--#{$val}.is-plain {
+    --dyd-button-text-color: var(--dyd-color-#{$val});
+    --dyd-button-bg-color: var(--dyd-color-#{$val}-light-9);
+    --dyd-button-border-color: var(--dyd-color-#{$val}-light-5);
+    --dyd-button-hover-text-color: var(--dyd-color-white);
+    --dyd-button-hover-bg-color: var(--dyd-color-#{$val});
+    --dyd-button-hover-border-color: var(--dyd-color-#{$val});
+    --dyd-button-active-text-color: var(--dyd-color-white);
+  }
+}
+
+// 针对 dyd-button-large 以及 dyd-button-small 书写相应的样式即可
+.dyd-button--large {
+  --dyd-button-size: 50px;
+  height: var(--dyd-button-size);
+  padding: 12px 19px;
+  font-size: var(--dyd-font-size-base);
+  border-radius: var(--dyd-border-radius-base);
+}
+.dyd-button--small {
+  --dyd-button-size: 24px;
+  height: var(--dyd-button-size);
+  padding: 5px 11px;
+  font-size: 12px;
+  border-radius: calc(var(--dyd-border-radius-base) - 1px);
+}

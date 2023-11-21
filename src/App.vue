@@ -20,15 +20,7 @@ h1.title {
   font-weight: 200;
 }
 
-p {
-  text-align: center;
-  font-weight: 200;
-  margin-top: 1em;
-  font-size: 18px;
-}
-
 .nav {
-  // border: 1px solid #ccc;
   display: flex;
   height: 50px;
   justify-content: space-evenly;
@@ -37,11 +29,10 @@ p {
 
 .displayArea {
   margin-top: 2em;
-  // border: 1px solid #ccc;
-  display: flex;
-  justify-content: center;
 }
-
+.active {
+  border-bottom: 3px solid hsla(160, 100%, 37%, 1);
+}
 .active {
   border-bottom: 3px solid hsla(160, 100%, 37%, 1);
 }
