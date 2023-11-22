@@ -7,14 +7,19 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 
 import './styles/index.scss'
 
-import Icon from './components/Icon/index'
-import Button from './components/Button/index'
+import Icon from './components/Icon/Icon.vue'
+import Button from './components/Button/Button.vue'
 
 /* add icons to the library */
 library.add(fas)
 
 const componentsArr = [Icon, Button];
 
+componentsArr.forEach((Com)=> {
+  Com.install = (app)=> {
+    app.component(Com.name, Com)
+  }
+})
 
 
 export default function install(app) {
@@ -29,4 +34,5 @@ export {
   install, 
   Icon,
   Button,
+  FontAwesomeIcon
 }

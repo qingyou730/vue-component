@@ -30,8 +30,8 @@ dependencies:
     specifier: ^3.3.4
     version: registry.npmmirror.com/vue@3.3.8
   vue-component-dyd:
-    specifier: 0.0.5
-    version: registry.npmmirror.com/vue-component-dyd@0.0.5(vue@3.3.8)
+    specifier: 0.0.6
+    version: registry.npmmirror.com/vue-component-dyd@0.0.6(vue@3.3.8)
   vue-router:
     specifier: ^4.2.5
     version: registry.npmmirror.com/vue-router@4.2.5(vue@3.3.8)
@@ -4094,6 +4094,29 @@ packages:
       pinia: registry.npmmirror.com/pinia@2.1.7(vue@3.3.8)
       vue: registry.npmmirror.com/vue@3.3.8
       vue-component-dyd: registry.npmmirror.com/vue-component-dyd@0.0.4(vue@3.3.8)
+      vue-router: registry.npmmirror.com/vue-router@4.2.5(vue@3.3.8)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - typescript
+    dev: false
+
+  registry.npmmirror.com/vue-component-dyd@0.0.6(vue@3.3.8):
+    resolution: {integrity: sha512-BZd2Ae2GXduJF+wHWJIdYRd1OYHtM9xcbqCfUTws2E/+Eq2I4mSoDV7g4oVXPM0gnMIZkunZO1QdcGIgjTuQxw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-component-dyd/-/vue-component-dyd-0.0.6.tgz}
+    id: registry.npmmirror.com/vue-component-dyd/0.0.6
+    name: vue-component-dyd
+    version: 0.0.6
+    peerDependencies:
+      vue: ^3.3.4
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': registry.npmmirror.com/@fortawesome/fontawesome-svg-core@6.4.2
+      '@fortawesome/free-solid-svg-icons': registry.npmmirror.com/@fortawesome/free-solid-svg-icons@6.4.2
+      '@fortawesome/vue-fontawesome': registry.npmmirror.com/@fortawesome/vue-fontawesome@3.0.5(@fortawesome/fontawesome-svg-core@6.4.2)(vue@3.3.8)
+      duyi-plus2: registry.npmmirror.com/duyi-plus2@1.0.0(vue@3.3.8)
+      lodash-es: registry.npmmirror.com/lodash-es@4.17.21
+      move-file-cli: registry.npmmirror.com/move-file-cli@3.0.0
+      pinia: registry.npmmirror.com/pinia@2.1.7(vue@3.3.8)
+      vue: registry.npmmirror.com/vue@3.3.8
+      vue-component-dyd: registry.npmmirror.com/vue-component-dyd@0.0.5(vue@3.3.8)
       vue-router: registry.npmmirror.com/vue-router@4.2.5(vue@3.3.8)
     transitivePeerDependencies:
       - '@vue/composition-api'
