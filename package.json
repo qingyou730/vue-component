@@ -1,6 +1,6 @@
 {
-  "name": "vue-component",
-  "version": "0.0.1",
+  "name": "vue-component-dyd",
+  "version": "0.0.3",
   "type": "module",
   "license": "MIT",
   "keywords": [
@@ -19,6 +19,9 @@
       "require": "./dist/umd/style.css"
     }
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
