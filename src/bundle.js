@@ -7,8 +7,8 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 
 import './styles/index.scss'
 
-import Icon from './components/Icon/Icon.vue'
-import Button from './components/Button/Button.vue'
+import Icon from './components/Icon/index'
+import Button from './components/Button/index'
 
 /* add icons to the library */
 library.add(fas)

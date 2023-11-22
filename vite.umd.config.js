@@ -24,7 +24,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/bundle.js'),
       name: 'DydPlusCom',
-      fileName: 'yud-plus',
+      fileName: 'dyd-plus',
       formats: ['umd'],
     },
     rollupOptions: {
