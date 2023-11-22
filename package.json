@@ -1,20 +1,41 @@
 {
   "name": "vue-component",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "vue3",
+    "components"
+  ],
+  "module": "dist/es/vue-component.js",
+  "main": "dist/umd/vue-component.umd.js",
+  "exports": {
+    ".": {
+      "import": "./dist/es/vue-component.js",
+      "require": "./dist/umd/vue-component.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build-all": "pnpm build-es && pnpm build-umd && pnpm move-style",
     "preview": "vite preview",
     "test:unit": "vitest",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "build-es": "vite build --config vite.es.config.js",
+    "build-umd": "vite build --config vite.umd.config.js",
+    "move-style": "move-file dist/es/style.css dist/style.css"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.4"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/vue-fontawesome": "^3.0.5",
     "lodash-es": "^4.17.21",
+    "move-file-cli": "^3.0.0",
     "pinia": "^2.1.7",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5"
