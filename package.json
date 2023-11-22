@@ -7,12 +7,16 @@
     "vue3",
     "components"
   ],
-  "module": "dist/es/vue-component.js",
-  "main": "dist/umd/vue-component.umd.js",
+  "module": "dist/es/dyd-plus.js",
+  "main": "dist/umd/dyd-plus.umd.js",
   "exports": {
     ".": {
-      "import": "./dist/es/vue-component.js",
-      "require": "./dist/umd/vue-component.umd.cjs"
+      "import": "./dist/es/dyd-plus.js",
+      "require": "./dist/umd/dyd-plus.umd.cjs"
+    },
+    "./style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/umd/style.css"
     }
   },
   "scripts": {
