@@ -9,11 +9,13 @@ import './styles/index.scss'
 
 import Icon from './components/Icon/Icon.vue'
 import Button from './components/Button/Button.vue'
+import Tooltip from './components/Tooltip/Tooltip.vue'
+
 
 /* add icons to the library */
 library.add(fas)
 
-const componentsArr = [Icon, Button];
+const componentsArr = [Icon, Button, Tooltip];
 
 componentsArr.forEach((Com)=> {
   Com.install = (app)=> {
@@ -34,5 +36,6 @@ export {
   install, 
   Icon,
   Button,
+  Tooltip,
   FontAwesomeIcon
 }

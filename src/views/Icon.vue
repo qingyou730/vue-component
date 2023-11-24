@@ -1,17 +1,17 @@
 <template>
-  <h1 class="row-title">普通引入</h1>
+  <div class="row-title">普通引入</div>
   <div class="row">
-    <Dyd-Icon icon="user-secret" />
-    <Dyd-Icon icon="bars" />
-    <Dyd-Icon icon="shield-halved" />
-    <Dyd-Icon icon="file" />
-    <Dyd-Icon icon="filter" />
-    <Dyd-Icon icon="gear" />
-    <Dyd-Icon icon="barcode" />
-    <Dyd-Icon icon="folder" />
-    <Dyd-Icon icon="folder-open" />
+    <Dyd-Icon size="xl" icon="user-secret" />
+    <Dyd-Icon size="xl" icon="bars" />
+    <Dyd-Icon size="xl" icon="shield-halved" />
+    <Dyd-Icon size="xl" icon="file" />
+    <Dyd-Icon size="xl" icon="filter" />
+    <Dyd-Icon size="xl" icon="gear" />
+    <Dyd-Icon size="xl" icon="barcode" />
+    <Dyd-Icon size="xl" icon="folder" />
+    <Dyd-Icon size="xl" icon="folder-open" />
   </div>
-  <h1 class="row-title">设置不同的大小</h1>
+  <div class="row-title">设置不同的大小</div>
   <div class="row">
     <Dyd-Icon icon="user-secret" size="2xs" />
     <Dyd-Icon icon="bars" size="xs" />
@@ -23,7 +23,7 @@
     <Dyd-Icon icon="folder" size="3x" />
     <Dyd-Icon icon="folder-open" size="4x" />
   </div>
-  <h1 class="row-title">旋转与翻转</h1>
+  <div class="row-title">旋转与翻转</div>
   <div class="row">
     <Dyd-Icon icon="user-secret" rotation="90" size="xl" />
     <Dyd-Icon icon="bars" rotation="270" size="xl" />
@@ -32,7 +32,7 @@
     <Dyd-Icon icon="filter" flip="vertical" size="xl" />
     <Dyd-Icon icon="folder-open" flip="both" size="xl" />
   </div>
-  <h1 class="row-title">动画效果</h1>
+  <div class="row-title">动画效果</div>
   <div class="row">
     <Dyd-Icon icon="user-secret" size="xl" beat />
     <Dyd-Icon icon="bars" size="xl" beat-fade />
@@ -44,7 +44,7 @@
     <Dyd-Icon icon="folder" size="xl" spin spin-reverse />
     <Dyd-Icon icon="folder-open" size="xl" spin-pulse />
   </div>
-  <h1 class="row-title">添加自定义属性</h1>
+  <div class="row-title">添加自定义属性</div>
   <div class="row">
     <Dyd-Icon icon="user-secret" size="xl" type="primary" />
     <Dyd-Icon icon="bars" size="xl" type="success" />

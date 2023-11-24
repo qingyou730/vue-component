@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Icon from '../views/Icon.vue'
+import Button from '../views/Button.vue'
 
 
 const router = createRouter({
@@ -7,17 +7,25 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'icon',
-      component: Icon
+      name: 'button',
+      component: Button
     },
     {
-      path: '/button',
-      name: 'button',
+      path: '/icon',
+      name: 'icon',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Button.vue')
-    }
+      component: () => import('../views/Icon.vue')
+    },
+    {
+      path: '/tooltip',
+      name: 'tooltip',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/TooltipView.vue')
+    },
   ]
 })
 

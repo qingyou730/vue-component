@@ -1,8 +1,10 @@
 <template>
   <h1 class="title"> 组件展示 </h1>
   <nav class="nav">
-    <router-link to="/">Icon</router-link>
-    <router-link to="/button">Button</router-link>
+    <router-link to="/">Button</router-link>
+    <router-link to="/icon">Icon</router-link>
+    <router-link to="/tooltip">tooltip</router-link>
+
   </nav>
   <div class="displayArea">
     <router-view></router-view>
