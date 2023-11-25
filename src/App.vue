@@ -3,8 +3,8 @@
   <nav class="nav">
     <router-link to="/">Button</router-link>
     <router-link to="/icon">Icon</router-link>
-    <router-link to="/tooltip">tooltip</router-link>
-
+    <router-link to="/tooltip">Tooltip</router-link>
+    <router-link to="/dialog">Dialog</router-link>
   </nav>
   <div class="displayArea">
     <router-view></router-view>

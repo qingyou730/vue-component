@@ -10,17 +10,17 @@ import App from './App.vue'
 // import install, { Button, Icon } from "vue-component-dyd";
 
 import router from './router'
-import {Icon, Button, FontAwesomeIcon, Tooltip} from './bundle'
+import {install, Icon, Button, FontAwesomeIcon, Tooltip} from './bundle'
 
 
 const app = createApp(App)
 
 console.log('Button: ', Button, Icon);
-app.component('font-awesome-icon', FontAwesomeIcon)
-Button.install(app)
-Icon.install(app)
-Tooltip.install(app)
-
+// app.component('font-awesome-icon', FontAwesomeIcon)
+// Button.install(app)
+// Icon.install(app)
+// Tooltip.install(app)
+install(app)
 app.use(createPinia())
 app.use(router)
 // install(app)

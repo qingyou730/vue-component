@@ -26,6 +26,14 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/TooltipView.vue')
     },
+    {
+      path: '/dialog',
+      name: 'dialog',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/DialogView.vue')
+    },
   ]
 })
 
