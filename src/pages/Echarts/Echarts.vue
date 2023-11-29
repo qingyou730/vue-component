@@ -60,7 +60,8 @@ watchEffect(() => {
           { min: 100, max: 200, color: '#409EFF' },
           { min: 10, max: 100, color: `#f3d19e` },
           { min: 5, max: 10, color: `#b3e19d` },
-          { min: 0, max: 5, color: `#a0cfff` }
+          { min: 1, max: 3, color: `#79bbff` },
+          {min: 0, max: 0, color: `#a0cfff`}
         ],
         textStyle: {
           color: '#000000'

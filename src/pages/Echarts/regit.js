@@ -46,11 +46,11 @@ export function getPovinceMap(serverData) {
   if(serverData.length){
     serverData.forEach(function (item) {
       item.province = item.province.replace(/省/g, '');
-      item.province = item.province.replace(/市/g, '');
-
-      if(map[item.province]){
+      item.province = item.province.replace(/市/g, ''); 
+      console.log('item.province ', item.province )
+      if(map[item.province] !== undefined){
         console.log('item: ', item,  map[item.province]);
-        map[item.province] =  map[item.province] + Number(item.accessNumber)
+        map[item.province] =  map[item.province] + Number(item.accessNumber || 0)
         console.log('item: 222', item,  map[item.province]);
       }
       if(item.ip == "::1") {
@@ -69,6 +69,6 @@ export function getPovinceMap(serverData) {
       value: map[key]
     });
   }
-
+  console.log('res: ', res);
   return res;
 }
