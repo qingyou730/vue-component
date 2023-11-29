@@ -3,8 +3,8 @@ import axios from "axios";
 class Api {
   constructor() {
     this.api = axios.create({
-      // baseURL: 'http://8.130.103.188/api',
-      baseURL: 'http://localhost:8889',
+      baseURL: 'http://8.130.103.188/api',
+      // baseURL: 'http://localhost:8889',
       timeout: 10000,
     })
   }
