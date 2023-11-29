@@ -1,17 +1,51 @@
 <template>
-  <h1 class="title"> 组件展示 </h1>
-  <nav class="nav">
+  <header class="navbar">
+    <div class="navbar-wrapper">
+      <div class="navbar-content">
+        <div v-for="(item, index) in navs" :key="item.name" :class="{active: $route.path === item.path, 'm-r-12': index === 1}" @click="handleClick(item.path)">
+          {{item.name}}
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- <nav class="nav" style="margin-top: 2em;">
     <router-link to="/">Button</router-link>
     <router-link to="/icon">Icon</router-link>
     <router-link to="/tooltip">Tooltip</router-link>
     <router-link to="/dialog">Dialog</router-link>
-  </nav>
+  </nav> -->
   <div class="displayArea">
     <router-view></router-view>
   </div>
 </template>
 
 <script setup>
+import { onMounted } from 'vue';
+import api from './axios/index';
+import { useRouter } from 'vue-router';
+onMounted(async () => {
+  console.log('App mounted');
+  const val = await api.post('/inter');
+  console.log('val', val);
+});
+const navs = [
+  {
+    name: '组件展示',
+    path: '/comHome',
+  },
+  {
+    name: '访问统计',
+    path: '/echarts',
+  },
+];
+const router = useRouter();
+
+const handleClick = (path)=> {
+  router.push(path);
+}
+
+
 
 </script>
 
@@ -22,16 +56,6 @@ h1.title {
   font-weight: 200;
 }
 
-.nav {
-  display: flex;
-  height: 50px;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.displayArea {
-  margin-top: 2em;
-}
 .active {
   border-bottom: 3px solid hsla(160, 100%, 37%, 1);
 }

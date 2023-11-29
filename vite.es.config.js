@@ -35,7 +35,13 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: ['vue', '@fortawesome/fontawesome-svg-core', '@fortawesome/free-solid-svg-icons', '@fortawesome/vue-fontawesome']
+      external: [
+        'vue', 
+        '@fortawesome/fontawesome-svg-core', 
+        '@fortawesome/free-solid-svg-icons', 
+        '@fortawesome/vue-fontawesome', 
+        'vue-component-dyd',
+      ]
     }
 
   }

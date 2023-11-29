@@ -34,7 +34,7 @@ export default defineConfig({
       formats: ['umd'],
     },
     rollupOptions: {
-      external: ['vue'],
+        external: ['vue', 'vue-component-dyd',],
       // 导出全局名称
       output: {
         exports: 'named'

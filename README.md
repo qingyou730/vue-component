@@ -25,6 +25,7 @@ import install, {Icon, Button, FontAwesomeIcon, Tooltip} from "vue-component-dyd
 
 const app = createApp(App)
 
+//使用icon组件依赖项
 app.component('font-awesome-icon', FontAwesomeIcon)
 
 Icon.install(app) // Register all components
@@ -78,4 +79,33 @@ Button.install(app)
       <Dyd-Button type="success">right</Dyd-Button>
     </Dyd-Tooltip>
   </div>
+```
+
+# Dialog
+```
+<div class="row">
+    <Dyd-Button type="primary" @click="visible = true">对话框一</Dyd-Button>
+    <Dyd-Button type="primary" @click="visible2 = true">对话框二</Dyd-Button>
+    <Dyd-Button type="primary" @click="visible3 = true">对话框三</Dyd-Button>
+  </div>
+  <Dyd-Dialog v-model:visible="visible" @close="visible = false" :radius="8">
+    这是一个基本的对话框
+  </Dyd-Dialog>
+  <Dyd-Dialog
+    v-model:visible="visible2"
+    @close="visible2 = false"
+    title="这是一个自定义标题"
+    width="30vw"
+    top="40vh"
+    :closeOnClickModal="false"
+  >
+    这是一个基本的对话框
+  </Dyd-Dialog>
+  <Dyd-Dialog v-model:visible="visible3" @close="visible3 = false">
+    这是一个基本的对话框
+    <template #footer>
+      <Dyd-Button @click="visible3 = false">取消</Dyd-Button>
+      <Dyd-Button type="primary" @click="visible3 = false">确定</Dyd-Button>
+    </template>
+  </Dyd-Dialog>
 ```

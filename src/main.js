@@ -1,7 +1,7 @@
 import './assets/main.css'
 import './styles/index.scss'
 import './index.scss'
-
+import './styles/page/echarts.scss'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -10,12 +10,11 @@ import App from './App.vue'
 // import install, { Button, Icon } from "vue-component-dyd";
 
 import router from './router'
-import {install, Icon, Button, FontAwesomeIcon, Tooltip} from './bundle'
+import { install } from './bundle'
 
 
 const app = createApp(App)
 
-console.log('Button: ', Button, Icon);
 // app.component('font-awesome-icon', FontAwesomeIcon)
 // Button.install(app)
 // Icon.install(app)
