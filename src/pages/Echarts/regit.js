@@ -45,6 +45,9 @@ export function getPovinceMap(serverData) {
 
   if(serverData.length){
     serverData.forEach(function (item) {
+      item.province = item.province.replace(/省/g, '');
+      item.province = item.province.replace(/市/g, '');
+
       if(map[item.province]){
         console.log('item: ', item,  map[item.province]);
         map[item.province] =  map[item.province] + Number(item.accessNumber)
