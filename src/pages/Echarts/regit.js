@@ -53,6 +53,9 @@ export function getPovinceMap(serverData) {
       if(item.ip == "::1") {
         map['北京'] =  map['北京'] + Number(item.accessNumber)
       }
+      if(item.ip == "::ffff:127.0.0.1") {
+        map['北京'] =  map['北京'] + Number(item.accessNumber)
+      }
     });
   }
   const res = [];
